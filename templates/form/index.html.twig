@@ -1,0 +1,9 @@
+
+
+{{ dump( form.parameter1.vars.choices) }}
+    {% for choice in form.parameter1.vars.choices  %}
+      { {{ loop.index - 1}}: {{ choice.value }}}
+    {% endfor %}
+    {{ dump(form.parameter2.vars.choices) }}
+        {{ form_widget(form.parameter1) }}
+        {{ form_widget(form.parameter2) }}
