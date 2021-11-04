@@ -24,9 +24,11 @@ class ProductType extends AbstractType
         $builder
             ->add('parameter1', ChoiceType::class, [
                 'choices'  => $this->productGroup(Product::PRODUCT_GROUP_1),
+                'required'   => false,
             ])
             ->add('parameter2', ChoiceType::class, [
                 'choices'  => $this->productGroup(Product::PRODUCT_GROUP_2),
+                'required'   => false,
             ])
         ;
 
