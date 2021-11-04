@@ -32,8 +32,8 @@ class ApiController extends AbstractController
         }
 
         return $this->json([
-            'parameter1' => ProductChoiceResponse::formChoicesToArray($form->get('parameter1')->createView()->vars['choices']),
-            'parameter2' => ProductChoiceResponse::formChoicesToArray($form->get('parameter2')->createView()->vars['choices']),
+            'parameter1' => $this->formChoicesToArray($form->get('parameter1')->createView()->vars['choices']),
+            'parameter2' => $this->formChoicesToArray($form->get('parameter2')->createView()->vars['choices']),
         ]);
     }
 
@@ -69,5 +69,14 @@ class ApiController extends AbstractController
         }
 
         return $errors;
+    }
+
+    public function formChoicesToArray($formChoices): array
+    {
+        $arr = [];
+        foreach ($formChoices as $choice) {
+            $arr[] = $choice->value;
+        }
+        return $arr;
     }
 }
