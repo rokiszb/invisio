@@ -1,7 +1,15 @@
-Invisio task solution
-
-JSON API for contact lens option selection
+##Invisio task solution
 
 This is most basic solution based on requirements provided
 
-api has /parameter endpoint
+## Available Commands
+
+In the project directory, start php or symfony server:
+
+### `symfony serve"`,
+or
+### `php -S localhost"`,
+
+## Author
+
+**Rokas Lakstauskas**
