@@ -1,4 +1,6 @@
-##Invisio task solution
+Invisio task solution
+
+JSON API for contact lens option selection
 
 This is most basic solution based on requirements provided
 
@@ -6,9 +8,14 @@ This is most basic solution based on requirements provided
 
 In the project directory, start php or symfony server:
 
-### `symfony serve"`,
-or
-### `php -S localhost"`,
+### `docker-compose build"`,
+### `docker-compose start"`,
+
+And open app http://localhost:8080/parameter
+
+Parameters passed as asked, through get query.
+
+?parameter1=A and etc.
 
 ## Author
 
